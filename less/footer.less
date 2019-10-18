@@ -1,0 +1,21 @@
+footer {
+    width: 100%;
+    height: 90px;
+    margin: 0 auto;
+    .flexbox(row, nowrap, center, center);
+    background-color: @greenbg;
+
+    nav {
+        .flexbox(row, nowrap, space-evenly, center);
+        width: 50%;
+
+        @media @500px {
+            width: 70%;
+        }
+    }
+    
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}

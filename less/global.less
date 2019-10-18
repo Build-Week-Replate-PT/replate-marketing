@@ -1,0 +1,145 @@
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+h1 {
+    font-size: @h1FontSize;
+}
+
+h2 {
+    font-size: @h2FontSize;
+}
+
+h3 {
+    font-size: @h3FontSize;
+}
+
+a, p {
+    font-size: @contentFontSize;
+}
+
+.banner {
+    background-image: url("../img/desktop_banner.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-width: 100%;
+    margin-top: 67.4333px;
+    height: 480px;
+    .flexbox(row, nowrap, center, center);
+
+    h1 {
+        text-align: center;
+        line-height: 1.5;
+        position: relative;
+        top: 5rem;
+    }
+
+    @media @1000px {
+        background-image: url("../img/Grouptablet-banner.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        // background-size: cover;
+        width: 100%;
+        height: 375px;
+    }
+
+    @media @800px {
+        background-image: url("../img/mobile_banner.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+.content {
+    width: 90%;
+    margin: 0 auto;
+    padding: 2.5rem 0;
+    .flexbox(row, nowrap, center, center);
+    border-bottom: 2px solid rgba(45, 145, 76, 0.19);
+
+    .content-container {
+        width: 75%;
+        margin: 0 auto;
+        .flexbox(row, nowrap, space-between, center);
+
+        .wrapper {
+            .flexbox(column, nowrap, center, center);
+            position: relative;
+            
+            h3 {
+                margin-top: 2rem;
+            }
+        }
+
+        .border {
+            border-right: @border;
+            height: 150px;
+        }  
+        
+        @media @1000px {
+            width: 90%;
+        }
+
+        @media @800px {
+            width: 100%;
+        }
+
+        @media @700px {
+            .flexbox(column, nowrap, center, center);
+
+            .border {
+                display: none;
+            }
+
+            .wrapper {
+                width: 50%;
+                margin: 1.5rem auto;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    @media @800px {
+        width: 90%;
+    }
+}
+
+.about {
+    width: 60%;
+    margin: 1.5rem auto;
+    .flexbox(column, nowrap, center, center);
+
+    h2 {
+        align-self: flex-start;
+    }
+
+    p {
+        margin: 0 5rem;
+        line-height: 1.5;
+    }
+
+    img {
+        margin-top: 1.5rem;
+    }
+
+    @media @1000px {
+        width: 70%;
+
+        p {
+            margin: 0 3.5rem;
+        }
+    }
+    
+    @media @800px {
+        width: 80%;
+
+        p {
+            margin: 0 2.5rem;
+        }
+    }
+}
