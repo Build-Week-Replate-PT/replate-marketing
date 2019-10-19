@@ -331,7 +331,6 @@ header {
   top: 0;
   z-index: 9999;
   overflow: hidden;
-  padding: 0 2rem;
   /* "Hide" checkbox -- moves it off screen*/
   /* Hide hamburger for bigger screens */
 }
@@ -340,6 +339,7 @@ header div {
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
+  padding-left: 2rem;
 }
 header div img {
   margin-right: 1rem;
@@ -350,6 +350,7 @@ header nav {
   justify-content: flex-end;
   align-items: center;
   width: 70%;
+  padding-right: 2rem;
 }
 header nav a {
   margin: 0 2rem;
@@ -431,14 +432,24 @@ header a {
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 100vw;
   }
   header nav a {
-    padding: 20px 20px;
+    padding: 20px 0;
     background-color: #ffffff;
     width: 100%;
     text-align: center;
     margin: 0 auto;
+    border-bottom: solid rgba(45, 145, 76, 0.12) 1px;
+  }
+  header nav a:first-child {
+    border-top: solid rgba(45, 145, 76, 0.12) 1px;
+  }
+  header nav a:last-child {
+    border-bottom: none;
+  }
+  header nav a:hover {
+    background-color: rgba(45, 145, 76, 0.19);
   }
   header .menu-btn:checked ~ nav {
     max-height: 240px;

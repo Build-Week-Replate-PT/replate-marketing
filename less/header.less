@@ -11,11 +11,12 @@ header {
     top: 0;
     z-index: 9999;
     overflow: hidden;
-    padding: 0 2rem;
+    // padding: 0 2rem;
     // box-shadow: @greenbg 0px 0px 6px 2px;
 
     div {
         .flexbox(row, nowrap, flex-start, center);
+        padding-left: 2rem;
         
         img {
             margin-right: 1rem;
@@ -25,6 +26,7 @@ header {
     nav {
         .flexbox(row, nowrap, flex-end, center);
         width: 70%;
+        padding-right: 2rem;
 
         a {
             margin: 0 2rem;
@@ -123,15 +125,27 @@ header {
             background-color: #ffffff;
             display: flex;
             flex-direction: column;
-            width: 100%;
+            width: 100vw;
 
             a {
-                padding: 20px 20px;
-                // border-bottom: @border;
+                padding: 20px 0;
                 background-color: #ffffff;
                 width: 100%;
                 text-align: center;
                 margin: 0 auto;
+                border-bottom: solid rgba(45, 145, 76, 0.12) 1px;
+            }
+
+            a:first-child {
+                border-top: solid rgba(45, 145, 76, 0.12) 1px;
+            }
+
+            a:last-child {
+                border-bottom: none;
+            }
+
+            a:hover {
+                background-color: @greenbg;
             }
         }
 
