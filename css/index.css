@@ -185,6 +185,16 @@ p {
   position: relative;
   top: 5rem;
 }
+@media (max-width: 500px) {
+  .banner h1 {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 375px) {
+  .banner h1 {
+    font-size: 1.25rem;
+  }
+}
 @media (max-width: 1000px) {
   .banner {
     background-image: url("../img/Grouptablet-banner.svg");
@@ -262,6 +272,11 @@ p {
     width: 100%;
   }
 }
+@media (max-width: 500px) {
+  .content .content-container .wrapper {
+    width: unset;
+  }
+}
 @media (max-width: 800px) {
   .content {
     width: 90%;
@@ -317,7 +332,6 @@ header {
   z-index: 9999;
   overflow: hidden;
   padding: 0 2rem;
-  box-shadow: rgba(187, 187, 187, 0.2) 0px 0px 6px 2px;
   /* "Hide" checkbox -- moves it off screen*/
   /* Hide hamburger for bigger screens */
 }
@@ -442,6 +456,9 @@ header a {
   header .menu-btn:checked ~ .menu-icon .navicon:after {
     top: 0;
   }
+}
+.box-shadow {
+  box-shadow: rgba(45, 145, 76, 0.19) 0px 0px 6px 2px;
 }
 footer {
   width: 100%;

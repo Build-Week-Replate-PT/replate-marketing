@@ -33,6 +33,14 @@ a, p {
         line-height: 1.5;
         position: relative;
         top: 5rem;
+
+        @media @500px {
+            font-size: 1.5rem;
+        }
+
+        @media @375px {
+            font-size: 1.25rem;
+        }
     }
 
     @media @1000px {
@@ -100,6 +108,12 @@ a, p {
                 img {
                     width: 100%;
                 }
+            }
+        }
+
+        @media @500px {
+            .wrapper {
+                width: unset;
             }
         }
     }
